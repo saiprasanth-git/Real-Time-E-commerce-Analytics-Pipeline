@@ -1,13 +1,13 @@
-# 🚀 Real-Time E-commerce Analytics Pipeline
+#  Real-Time E-commerce Analytics Pipeline
 
 A production-ready data engineering solution for real-time e-commerce analytics with ML-powered fraud detection, built on Apache Spark and Delta Lake.
 
-![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
-![Spark](https://img.shields.io/badge/Apache%20Spark-3.3+-orange.svg)
-![MLflow](https://img.shields.io/badge/MLflow-2.0+-green.svg)
-![Delta Lake](https://img.shields.io/badge/Delta%20Lake-2.2+-red.svg)
+[Python]
+[Spark]
+[MLflow]
+[Delta Lake]
 
-## 🎯 Features
+##  Features
 
 - **Real-time Data Processing**: Streaming transaction processing with Kafka integration
 - **Medallion Architecture**: Bronze → Silver → Gold data layers for optimal data organization  
@@ -17,15 +17,15 @@ A production-ready data engineering solution for real-time e-commerce analytics 
 - **Delta Lake**: ACID transactions and time travel capabilities
 - **Production Ready**: Configurable, testable, and scalable design
 
-## 🏗️ Architecture
+##  Architecture
 
-```
+
 Raw Data (Kafka) → Bronze Layer (Delta) → Silver Layer (Cleaned) → Gold Layer (Aggregated)
                                      ↓
                             ML Model Training & Inference
-```
 
-## 🛠️ Tech Stack
+
+##  Tech Stack
 
 - **Data Processing**: Apache Spark, PySpark
 - **Storage**: Delta Lake, Databricks
@@ -34,7 +34,7 @@ Raw Data (Kafka) → Bronze Layer (Delta) → Silver Layer (Cleaned) → Gold La
 - **Language**: Python 3.8+
 - **Testing**: PyTest
 
-## 🚦 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -79,7 +79,7 @@ results = pipeline.run_pipeline()
 print(f"Pipeline completed: {results}")
 ```
 
-## 📊 Sample Results
+##  Sample Results
 
 The pipeline processes transaction data and generates:
 
@@ -89,7 +89,6 @@ The pipeline processes transaction data and generates:
 - **Data Quality Reports**: Completeness, accuracy, consistency metrics
 
 Example output:
-```json
 {
   "status": "success",
   "model_auc": 0.9547,
@@ -97,31 +96,10 @@ Example output:
   "fraud_detected": 487,
   "data_quality_score": 0.98
 }
-```
 
-## 🔧 Configuration
 
-Edit `config/pipeline_config.json`:
 
-```json
-{
-  "spark": {
-    "app_name": "EcommerceAnalytics",
-    "executor_memory": "4g"
-  },
-  "paths": {
-    "bronze": "/data/bronze/transactions",
-    "silver": "/data/silver/transactions", 
-    "gold": "/data/gold/analytics"
-  },
-  "ml": {
-    "fraud_threshold": 0.5,
-    "model_retrain_days": 7
-  }
-}
-```
-
-## 🧪 Testing
+##  Testing
 
 Run the test suite:
 ```bash
@@ -133,14 +111,14 @@ Run specific tests:
 pytest tests/test_pipeline.py -v
 ```
 
-## 📈 Performance
+##  Performance
 
 - **Throughput**: 10,000+ transactions/second
 - **Latency**: <100ms fraud detection
 - **Accuracy**: 95%+ fraud detection accuracy
 - **Scalability**: Horizontal scaling with Spark
 
-## 🚀 Deployment
+## Deployment
 
 ### Local Development
 ```bash
@@ -158,21 +136,7 @@ docker build -f docker/Dockerfile -t ecommerce-pipeline .
 docker run ecommerce-pipeline
 ```
 
-## 📁 Project Structure
-
-```
-├── src/                    # Source code
-│   ├── pipeline/          # Core pipeline logic
-│   ├── models/           # ML models
-│   └── utils/            # Utilities
-├── scripts/              # Execution scripts
-├── config/               # Configuration files
-├── tests/                # Test files
-├── notebooks/            # Jupyter notebooks
-└── docs/                 # Documentation
-```
-
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature-name`
@@ -181,13 +145,13 @@ docker run ecommerce-pipeline
 5. Submit a pull request
 
 
-## 👨‍💻 Author
+##  Author
 
 **Sai Prasanth**
 - LinkedIn: [https://linkedin.com/in/prasanth9883]
 - Email: saiprasanth.grandhisiri@gmail.com
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Apache Spark community
 - Delta Lake team
